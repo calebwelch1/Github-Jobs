@@ -9,7 +9,7 @@ import Widgets from '@material-ui/icons/Widgets';
 import { ColumnToRow, Row, Item } from '@mui-treasury/components/flex';
 import { NavMenu, NavItem } from '@mui-treasury/components/menu/navigation';
 import TextField from '@material-ui/core/TextField';
-
+import DataTable from '../components/DataTable'
 
 
 import { usePlainNavigationMenuStyles } from '@mui-treasury/styles/navigationMenu/plain';
@@ -47,7 +47,7 @@ export const Main = React.memo(function NeptuneAppFooter() {
   const classes = useStyles();
   const [search, setSearch] = useState('')
   useEffect(() => {
-componentDidMount();
+// componentDidMount();
 },[]);
 
 const onSubmitForm = (event) => {
@@ -126,6 +126,7 @@ err => {
                 <input type="submit"/>
               </form>
         </Box>
+<DataTable/>
         <Divider />
         <Box pt={2} pb={10}>
           <ColumnToRow
@@ -156,14 +157,13 @@ err => {
                   variant={'caption'}
                   color={'textSecondary'}
                 >
-                  Designed by Anonymous © Fake Studio 2020 All right reserved
+                 By Caleb Welch © 2020 All right reserved
                 </Typography>
               </Box>
             </Item>
           </ColumnToRow>
         </Box>
       </Container>
-      <Landing/>
     </Box>
   );
 });
